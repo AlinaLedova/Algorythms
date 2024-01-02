@@ -2,11 +2,11 @@
 
 namespace Algorythms\DataStructures\Substructures;
 
-class Node
+class GraphNode
 {
     public mixed $value;
     /**
-     * @var Node[]
+     * @var GraphNode[]
      */
     public array $lines = [];
 
@@ -14,7 +14,7 @@ class Node
         $this->value = $value;
     }
 
-    public function addLine(Node $node): void
+    public function addLine(GraphNode $node): void
     {
         array_push($this->lines, $node);
     }
