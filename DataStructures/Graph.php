@@ -2,21 +2,21 @@
 
 namespace Algorythms\DataStructures;
 
-use Algorythms\DataStructures\Substructures\Node;
+use Algorythms\DataStructures\Substructures\GraphNode;
 
 class Graph
 {
     /**
-     * @var Node[] list of nodes
+     * @var GraphNode[] list of nodes
      */
     public array $nodes = [];
 
     public function addNode(mixed $value): void
     {
-        array_push($this->nodes, new Node($value));
+        array_push($this->nodes, new GraphNode($value));
     }
 
-    public function find(mixed $value): ?Node
+    public function find(mixed $value): ?GraphNode
     {
         $result = array_filter($this->nodes, function ($node) use ($value) {
             return $node->value === $value;
