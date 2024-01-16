@@ -1,8 +1,8 @@
 <?php
 
-namespace Algorythms\DataStructures
+namespace Algorythms
 {
-    function LoadDataStructure(string $fullClassName): bool
+    function Autoload(string $fullClassName): bool
     {
         $parts = explode('\\', $fullClassName);
         array_shift($parts);
@@ -19,5 +19,5 @@ namespace Algorythms\DataStructures
         return true;
     }
 
-    spl_autoload_register(__NAMESPACE__ . '\LoadDataStructure');
+    spl_autoload_register(__NAMESPACE__ . '\Autoload');
 }
